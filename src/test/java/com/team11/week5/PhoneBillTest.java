@@ -52,7 +52,8 @@ public class PhoneBillTest {
 		calc = new Calculator(info);
 		calc.sumTotalRate();
 		assertFalse(calc.setPlan("bronze"));
-		new MainProgram(new String[]{"Gold", "1000", "3"}).main(null);
+		MainProgram mp = new MainProgram(new String[]{"Gold", "1000", "3"});
+		mp.main(null);
 
 	}
 

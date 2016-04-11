@@ -1,10 +1,10 @@
 package com.team11.week5;
 
 public abstract class PlanRates {
-	public static final double basicMontlyRate = 0;
-	public static final double ratePerExcessMinute = 0;
-	public static final int includeMinutes = 0;
-	public static final double adittionalLineRate = 0;
+	public static final double BASICMONTLYRATE = 0;
+	public static final int INCLUDEDMINUTES = 0;
+	public static final double ADITTIONALLINERATE = 0;
+	public static final double RATEPEREXCESSMINUTE = 0;
 
 	public abstract double getBasicMonthlyRate();
 	
