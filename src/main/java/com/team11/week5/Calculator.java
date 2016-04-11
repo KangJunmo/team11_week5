@@ -59,7 +59,7 @@ public class Calculator {
 	protected double calcExcessRateByLines(){
 		if (numberOfLines == 1) 
 			return 0;
-		else if (numberOfLines>1 && numberOfLines<4){
+		else if (numberOfLines<4){
 			return (numberOfLines-1)*additionalLineRate;
 		} 
 		else{
