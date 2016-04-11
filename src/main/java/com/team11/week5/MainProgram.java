@@ -16,6 +16,7 @@ public class MainProgram {
 		try {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);	
 		} catch(ArrayIndexOutOfBoundsException e) {
+			e.getMessage();
 			scan = new Scanner(System.in);
 		}
 		log = Logger.getLogger("Logger");
@@ -25,6 +26,8 @@ public class MainProgram {
 		Calculator calc = new Calculator(userInfo);
 		
 		log.log(Level.INFO, calc.sumTotalRate());
+		
+		scan.close();
 	}
 	
 
