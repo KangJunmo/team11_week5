@@ -8,9 +8,6 @@ public class MainProgram {
 	private static Logger log;
 	private static Scanner scan = new Scanner(System.in);
 	
-	private MainProgram() {	
-	}
-	
 	public static void main(String[] args){
 		if(args.length != 0) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
