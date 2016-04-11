@@ -1,9 +1,11 @@
 package com.team11.week5;
 
-import java.io.PrintStream;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MainProgram {
+	private static Logger log;
 	private static Scanner scan = new Scanner(System.in);
 	
 	MainProgram(String[] args) {
@@ -11,14 +13,13 @@ public class MainProgram {
 	}
 	
 	public static void main(String[] args){
-	    
-		PrintStream out=System.out;
-				
+		log = Logger.getLogger("Logger");
+		
 		InfoGetter userInfo = new InfoGetter(scan);
 		
 		Calculator calc = new Calculator(userInfo);
 		
-		out.println(calc.sumTotalRate());	
+		log.log(Level.INFO, calc.sumTotalRate());
 	}
 	
 
