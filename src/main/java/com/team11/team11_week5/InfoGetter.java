@@ -12,30 +12,17 @@ public class InfoGetter {
 	Scanner scan = new Scanner(System.in);
 	
 
-	public InfoGetter(){
+	public InfoGetter(Scanner sc){
 		log = Logger.getLogger("Logger");
 		
 		log.log(Level.INFO, "Input the plan : (Gold or Silver)");
-		this.plan = scan.next();
+		this.plan = sc.next();
 		
 		log.log(Level.INFO, "Input the minutes used : ");
-		this.minutesUsed = scan.nextInt();
+		this.minutesUsed = sc.nextInt();
 		
 		log.log(Level.INFO, "Input the number of lines : ");
-		this.numberOfLines = scan.nextInt();
-	}
-	
-	public InfoGetter(String plan, int min, int num){
-		log = Logger.getLogger("Logger");
-		
-		log.log(Level.INFO, "Input the plan : (Gold or Silver)\n"+plan);
-		this.plan = plan;
-		
-		log.log(Level.INFO, "Input the minutes used : \n"+min);
-		this.minutesUsed = min;
-		
-		log.log(Level.INFO, "Input the number of lines : \n"+num);
-		this.numberOfLines = num;
+		this.numberOfLines = sc.nextInt();
 	}
 	
 	public String getPlan(){

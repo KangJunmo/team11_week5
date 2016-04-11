@@ -2,6 +2,8 @@ package com.team11.team11_week5;
 
 import static org.junit.Assert.*;
 
+import java.util.Scanner;
+
 import org.junit.Test;
 
 public class PhoneBillTest {
@@ -10,7 +12,7 @@ public class PhoneBillTest {
 	
 	@Test
 	public void testGold() {
-		info = new InfoGetter("Gold", 1000, 1);
+		info = new InfoGetter(new Scanner("Gold 1000 1" ));
 		calc = new Calculator(info);
 		assertNotNull(info.getNumberOfLines());
 		assertNotNull(info.getMinutesUsed());
@@ -25,7 +27,7 @@ public class PhoneBillTest {
 	
 	@Test
 	public void testSilver(){
-		info = new InfoGetter("Silver", 1000, 1);
+		info = new InfoGetter(new Scanner("Silver 1000 1" ));
 		calc = new Calculator(info);
 		assertNotNull(info.getNumberOfLines());
 		assertNotNull(info.getMinutesUsed());
@@ -40,17 +42,17 @@ public class PhoneBillTest {
 	
 	@Test
 	public void testOthers() {
-		info = new InfoGetter("Silver", 500, 6);
+		info = new InfoGetter(new Scanner("Gold 500 6" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
 		assertFalse(calc.setPlan("bronze"));
-		info = new InfoGetter("Silver", 2000, 1);
+		info = new InfoGetter(new Scanner("Silver 2000 1" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
-		info = new InfoGetter("Silver", 2000, 3);
+		info = new InfoGetter(new Scanner("Silver 2000 3" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
-		info = new InfoGetter("Silver", 2000, 5);
+		info = new InfoGetter(new Scanner("Silver 2000 5" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
 	}
