@@ -20,11 +20,9 @@ public class MainProgram {
 		scan = new Scanner(System.in);
 		MainProgram mp = new MainProgram(args);
 		System.out.println(args.toString());
-		if(mp.argsLength == 3) {
+		//if(mp.argsLength == 3) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
-		} else {
-			scan = new Scanner(System.in);
-		}
+		//}
 		
 		log = Logger.getLogger("Logger");
 		
