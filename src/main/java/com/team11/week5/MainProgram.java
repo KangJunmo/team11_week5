@@ -4,11 +4,16 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public final class MainProgram {
+public class MainProgram {
 	private static Logger log;
 	private static Scanner scan = new Scanner(System.in);
 	
+	MainProgram(String[] args) {
+		
+	}
+	
 	public static void main(String[] args){
+		new MainProgram(null);
 		if(args.length != 0) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
 		}
