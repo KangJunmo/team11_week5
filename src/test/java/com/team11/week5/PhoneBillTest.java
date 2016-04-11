@@ -56,7 +56,7 @@ public class PhoneBillTest {
 		assertFalse(calc.setPlan("bronze"));
 		MainProgram.main(new String[]{"Gold", "1000", "3"});
 		MainProgram.main(new String[]{"Gold", "1000", "3", "family"});
-
+		MainProgram.main(new String[]{"Gold", "1000", "3", "family", "riot"});
 	}
 
 }
