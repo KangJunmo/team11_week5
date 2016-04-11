@@ -6,18 +6,24 @@ import java.util.logging.Logger;
 
 public class MainProgram {
 	private static Logger log;
-	private static Scanner scan = new Scanner(System.in);
+	private static Scanner scan;
 	int argsLength = 0;
+	//Scanner sc[] = new Scanner[4];
 	
 	MainProgram(String[] args) {
 		argsLength = args.length;
+		//sc[argsLength] = new Scanner(args);
+		//sc[0] = new Scanner(System.in);
 	}
 	
 	public static void main(String[] args){
+		scan = new Scanner(System.in);
 		MainProgram mp = new MainProgram(args);
-		System.out.println(mp.argsLength);
+		System.out.println(args.toString());
 		if(mp.argsLength == 3) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
+		} else {
+			scan = new Scanner(System.in);
 		}
 		
 		log = Logger.getLogger("Logger");
@@ -28,7 +34,6 @@ public class MainProgram {
 		
 		log.log(Level.INFO, calc.sumTotalRate());
 		
-		scan.close();
 	}
 	
 
