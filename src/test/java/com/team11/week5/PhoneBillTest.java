@@ -48,7 +48,7 @@ public class PhoneBillTest {
 	
 	@Test
 	public void testOthers() {
-		info = new InfoGetter(new Scanner("Gold 1200 3" ));
+		info = new InfoGetter(new Scanner("Gold 1200 2" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
 		info = new InfoGetter(new Scanner("Silver 2000 5" ));
