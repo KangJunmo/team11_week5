@@ -55,6 +55,8 @@ public class PhoneBillTest {
 		info = new InfoGetter(new Scanner("Silver 2000 5" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
+		new MainProgram();
+		MainProgram.main(new String[]{"Gold", "1000", "3"});
 	}
 
 }
