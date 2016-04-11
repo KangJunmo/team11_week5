@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 public class MainProgram {
 	private static Logger log;
 	private static Scanner scan = new Scanner(System.in);
-	public int temp = 0;
+	private int temp = 0;
 	MainProgram(String[] args) {
 		
 	}
@@ -15,7 +15,6 @@ public class MainProgram {
 	public static void main(String[] args){
 		MainProgram mp = new MainProgram(null);
 		mp.temp = 3;
-		mp = null;
 		
 		if(args.length != 0) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
