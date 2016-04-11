@@ -15,8 +15,8 @@ public class MainProgram {
 	
 	public static void main(String[] args){
 		MainProgram mp = new MainProgram(args);
-		
-		if(mp.argsLength != 0) {
+		System.out.println(mp.argsLength);
+		if(mp.argsLength == 3) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
 		}
 		
