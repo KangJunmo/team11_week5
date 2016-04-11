@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class MainProgram {
+public final class MainProgram {
 	private static Logger log;
 	private static Scanner scan = new Scanner(System.in);
 	
