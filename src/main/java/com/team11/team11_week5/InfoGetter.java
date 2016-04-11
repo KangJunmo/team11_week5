@@ -13,10 +13,6 @@ public class InfoGetter {
 	
 
 	public InfoGetter(){
-		setInfo();
-	}
-	
-	public void setInfo() {
 		log = Logger.getLogger("Logger");
 		
 		log.log(Level.INFO, "Input the plan : (Gold or Silver)");
@@ -29,7 +25,6 @@ public class InfoGetter {
 		this.numberOfLines = scan.nextInt();
 	}
 	
-	/// delete
 	public InfoGetter(String plan, int min, int num){
 		log = Logger.getLogger("Logger");
 		
