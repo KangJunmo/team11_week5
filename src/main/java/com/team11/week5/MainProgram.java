@@ -7,16 +7,15 @@ import java.util.logging.Logger;
 public class MainProgram {
 	private static Logger log;
 	private static Scanner scan = new Scanner(System.in);
-	private int temp = 0;
+	int argsLength = 0;
 	MainProgram(String[] args) {
-		
+		argsLength = args.length;
 	}
 	
 	public static void main(String[] args){
-		MainProgram mp = new MainProgram(null);
-		mp.temp = 3;
+		MainProgram mp = new MainProgram(args);
 		
-		if(args.length != 0) {
+		if(mp.argsLength != 0) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
 		}
 		
