@@ -8,6 +8,7 @@ public class MainProgram {
 	private static Logger log;
 	private static Scanner scan = new Scanner(System.in);
 	int argsLength = 0;
+	
 	MainProgram(String[] args) {
 		argsLength = args.length;
 	}
