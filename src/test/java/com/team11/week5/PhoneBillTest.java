@@ -17,7 +17,7 @@ public class PhoneBillTest {
 	
 	@Test
 	public void testGold() {
-		info = new InfoGetter(new Scanner("Gold 1000 1" ));
+		info = new InfoGetter(new Scanner("Gold 1000 3" ));
 		calc = new Calculator(info);
 		assertNotNull(info.getNumberOfLines());
 		assertNotNull(info.getMinutesUsed());
@@ -28,6 +28,8 @@ public class PhoneBillTest {
 		assertEquals(0, Double.compare(planRates.getAdditionalLineRate(), 14.50));
 		assertEquals(planRates.getIncludedMinutes(), 1000);
 		assertEquals(0, Double.compare(planRates.getRatePerExcessMinute(), 0.45));
+		calc.sumTotalRate();
+
 	}
 	
 	@Test
@@ -48,7 +50,7 @@ public class PhoneBillTest {
 	
 	@Test
 	public void testOthers() {
-		info = new InfoGetter(new Scanner("Silver 2000 3" ));
+		info = new InfoGetter(new Scanner("Silver 2000 5" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
 		assertFalse(calc.setPlan("bronze"));
