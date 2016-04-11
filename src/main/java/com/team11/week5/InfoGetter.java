@@ -1,4 +1,5 @@
-package com.team11.team11_week5;
+package com.team11.week5;
+import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
@@ -7,21 +8,18 @@ import java.util.logging.Level;
 public class InfoGetter {
 	private String plan;
 	private int minutesUsed;
-	private int numberOfLines;
-	private Logger log;
-	Scanner scan = new Scanner(System.in);
-	
+	private int numberOfLines;	
 
 	public InfoGetter(Scanner sc){
-		log = Logger.getLogger("Logger");
+		PrintStream out=System.out;
 		
-		log.log(Level.INFO, "Input the plan : (Gold or Silver)");
+		out.println("Input the plan : (Gold or Silver)");
 		this.plan = sc.next();
 		
-		log.log(Level.INFO, "Input the minutes used : ");
+		out.println("Input the minutes used : ");
 		this.minutesUsed = sc.nextInt();
 		
-		log.log(Level.INFO, "Input the number of lines : ");
+		out.println("Input the number of lines : ");
 		this.numberOfLines = sc.nextInt();
 	}
 	

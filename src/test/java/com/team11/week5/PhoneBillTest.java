@@ -1,10 +1,15 @@
-package com.team11.team11_week5;
+package com.team11.week5;
 
 import static org.junit.Assert.*;
 
 import java.util.Scanner;
 
 import org.junit.Test;
+
+import com.team11.week5.Calculator;
+import com.team11.week5.InfoGetter;
+import com.team11.week5.MainProgram;
+import com.team11.week5.PlanRates;
 
 public class PhoneBillTest {
 	InfoGetter info;
@@ -42,19 +47,10 @@ public class PhoneBillTest {
 	
 	@Test
 	public void testOthers() {
-		info = new InfoGetter(new Scanner("Gold 500 6" ));
-		calc = new Calculator(info);
-		calc.sumTotalRate();
-		assertFalse(calc.setPlan("bronze"));
-		info = new InfoGetter(new Scanner("Silver 2000 1" ));
-		calc = new Calculator(info);
-		calc.sumTotalRate();
-		info = new InfoGetter(new Scanner("Silver 2000 3" ));
-		calc = new Calculator(info);
-		calc.sumTotalRate();
 		info = new InfoGetter(new Scanner("Silver 2000 5" ));
 		calc = new Calculator(info);
 		calc.sumTotalRate();
+		assertFalse(calc.setPlan("bronze"));
 		new MainProgram(new String[]{"Gold", "1000", "3"}).main(null);
 
 	}

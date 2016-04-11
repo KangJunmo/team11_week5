@@ -1,4 +1,4 @@
-package com.team11.team11_week5;
+package com.team11.week5;
 
 public class Gold extends PlanRates {
 	

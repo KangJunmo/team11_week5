@@ -1,4 +1,4 @@
-package com.team11.team11_week5;
+package com.team11.week5;
 
 import java.text.NumberFormat;
 
@@ -14,7 +14,6 @@ public class Calculator {
 	private double ratePerExcessMinute;
 	
 	private NumberFormat nf;
-	
 	
 	protected String totalRate; //delete 
 	
