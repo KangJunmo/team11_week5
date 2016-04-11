@@ -34,15 +34,16 @@ public class PhoneBillTest {
 	public void testSilver(){
 		info = new InfoGetter(new Scanner("Silver 1000 1" ));
 		calc = new Calculator(info);
-		assertNotNull(info.getNumberOfLines());
-		assertNotNull(info.getMinutesUsed());
 		assertEquals("Silver",info.getPlan());
 		assertTrue(calc.setPlan(info.getPlan()));
+		assertNotNull(info.getMinutesUsed());
+		assertNotNull(info.getNumberOfLines());
 		PlanRates planRates = calc.planRates;
 		assertEquals(0, Double.compare(planRates.getBasicMonthlyRate(), 29.95));
 		assertEquals(0, Double.compare(planRates.getAdditionalLineRate(), 21.50));
 		assertEquals(planRates.getIncludedMinutes(), 500);
 		assertEquals(0, Double.compare(planRates.getRatePerExcessMinute(), 0.54));
+		calc.sumTotalRate();
 	}
 	
 	@Test
