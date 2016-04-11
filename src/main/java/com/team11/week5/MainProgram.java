@@ -6,19 +6,17 @@ import java.util.logging.Logger;
 
 public class MainProgram {
 	private static Logger log;
-	private static Scanner scan;
+	private static Scanner scan = new Scanner(System.in);
 	
 	MainProgram(String[] args) {
 		
 	}
 	
 	public static void main(String[] args){
-		try {
-			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);	
-		} catch(ArrayIndexOutOfBoundsException e) {
-			e.getMessage();
-			scan = new Scanner(System.in);
+		if(args.length != 0) {
+			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
 		}
+		
 		log = Logger.getLogger("Logger");
 		
 		InfoGetter userInfo = new InfoGetter(scan);
