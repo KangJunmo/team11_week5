@@ -19,7 +19,7 @@ public class MainProgram {
 		
 		if(mp.argsLength == 3) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
-		} else if(mp.argsLength > 3) {
+		} if(mp.argsLength > 3) {
 			scan = new Scanner(args[0] + " " + args[1] + " " + args[2]);
 		}
 		
