@@ -8,27 +8,27 @@ public class Calculator {
 	private int minutesUsed;
 	private int numberOfLines;
 	
-	protected double basicMonthlyRate; //private
+	protected double basicMonthlyRate; 
 	private double additionalLineRate;
 	private int includedMinutes;
 	private double ratePerExcessMinute;
 	
 	private NumberFormat nf;
 	
-	protected String totalRate; //delete 
+	protected String totalRate; 
 	
 	public Calculator(InfoGetter userInfo){
 		
-		plan = userInfo.getPlan();//占쏙옙占�
-		minutesUsed = userInfo.getMinutesUsed();//占쏙옙酉�
-		numberOfLines = userInfo.getNumberOfLines();//占쌘쏙옙占쏙옙占쏙옙占쏙옙占싼띰옙占싸쇽옙
+		plan = userInfo.getPlan();
+		minutesUsed = userInfo.getMinutesUsed();
+		numberOfLines = userInfo.getNumberOfLines();
 
 		setPlan(plan);
 		
-		basicMonthlyRate = planRates.getBasicMonthlyRate(); //占썩본占쏙옙
-		additionalLineRate = planRates.getAdditionalLineRate(); //占쌩곤옙占쏙옙占싸쇽옙占쏙옙占쌩곤옙占쏙옙占�
-		includedMinutes = planRates.getIncludedMinutes(); //占썩본占쏙옙占쏙옙占실댐옙占쏙옙화占시곤옙
-		ratePerExcessMinute = planRates.getRatePerExcessMinute(); //占싻댐옙占십곤옙占시곤옙占쏙옙占�
+		basicMonthlyRate = planRates.getBasicMonthlyRate(); 
+		additionalLineRate = planRates.getAdditionalLineRate(); 
+		includedMinutes = planRates.getIncludedMinutes(); 
+		ratePerExcessMinute = planRates.getRatePerExcessMinute(); 
 
 		nf = NumberFormat.getInstance();
 		nf.setMinimumFractionDigits(2);
@@ -48,10 +48,10 @@ public class Calculator {
 	}
 	
 	protected double calcExcessRateByMinute(){
-		if(minutesUsed - includedMinutes <= 0){ //占쏙옙占쏙옙微占� 占십곤옙占쏙옙占쏙옙占쏙옙占쏙옙
+		if(minutesUsed - includedMinutes <= 0){ 
 			return 0;
 		} 
-		else { //占쏙옙占쏙옙微占� 占십곤옙占쏙옙占쏙옙占쏙옙
+		else { 
 			return (minutesUsed-includedMinutes) * ratePerExcessMinute;
 		}
 	}
